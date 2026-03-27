@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background: #0400ff;
+    color:aqua;
+}
+
+.cabecera{
+    position: sticky;
+    top: 0;
+    background: #cdc7ff;
+    padding: 15px 0;
+    z-index: 1000;
+    border-bottom: 2px solid #000000;
+    box-shadow: 0 4px 15px rgba(255, 42, 138, 0, 6);
+}
+
+.barra-navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.enlaces-navegacion{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
