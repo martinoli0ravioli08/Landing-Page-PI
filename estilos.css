@@ -2,13 +2,13 @@ body{
     margin: 0;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background: #0400ff;
-    color:aqua;
+    color:rgb(76, 0, 255);
 }
 
 .cabecera{
     position: sticky;
     top: 0;
-    background: #cdc7ff;
+    background: #ffffff;
     padding: 15px 0;
     z-index: 1000;
     border-bottom: 2px solid #000000;
@@ -25,5 +25,40 @@ body{
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.card {
+    width: 60%; /* L'hem fet més ampla com demanaves */
+    margin: 20px auto; /* El 'auto' la centra horitzontalment */
+    color: #000000;
+    background: rgba(235, 231, 231, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Corregit el valor de l'ombra */
+    background: rgba(235, 231, 231, 0.8);
+    color: #000000 !important; /* Força que el text de la card sigui negre */
+}
+
+/* Això farà que el contingut dins de les seccions sigui més ample */
+.container {
+    max-width: 95% !important; /* Ajusta el % al teu gust, 100% seria total */
+}
+.section {
+    width: 100%;
+    padding: 60px 0;
+    border-bottom: 2px solid #000000; /* La línia que separa seccions */
+    text-align: center; /* Centra tot el text i elements interns */
+}
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #0400ff;
+    color: #ffffff; /* Això posa tot el text en blanc */
+}
+.section {
+    color: #ffffff; /* El text de les seccions serà blanc */
+}
+
+.section h2 {
+    color: #ffffff; /* Els títols també en blanc */
 }
 
