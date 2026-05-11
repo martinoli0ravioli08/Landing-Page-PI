@@ -1,86 +1,88 @@
-body{
-    margin: 0;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    background: #0400ff;
-    color:rgb(76, 0, 255);
+/* CONFIGURACIÓ GENERAL */
+html {
+    scroll-behavior: smooth;
 }
 
-.cabecera{
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #000;
+}
+
+/* HEADER FIX */
+.cabecera {
     position: sticky;
     top: 0;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.95);
     padding: 15px 0;
     z-index: 1000;
-    border-bottom: 2px solid #000000;
-    box-shadow: 0 4px 15px rgba(255, 42, 138, 0, 6);
+    border-bottom: 4px solid #0000ff;
 }
 
-.barra-navegacion{
+.barra-navegacion {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.enlaces-navegacion{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.logo {
+    color: #000 !important;
+    font-weight: bold;
 }
 
-.card {
-    width: 60%; /* L'hem fet més ampla com demanaves */
-    margin: 20px auto; /* El 'auto' la centra horitzontalment */
-    color: #000000;
-    background: rgba(235, 231, 231, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Corregit el valor de l'ombra */
-    background: rgba(235, 231, 231, 0.8);
-    color: #000000 !important; /* Força que el text de la card sigui negre */
+.enlaces-navegacion a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-left: 20px; /* Una mica més d'espai entre enllaços */
+    transition: 0.3s;
 }
 
-/* Això farà que el contingut dins de les seccions sigui més ample */
-.container {
-    max-width: 95% !important; /* Ajusta el % al teu gust, 100% seria total */
+.enlaces-navegacion a:hover {
+    color: #0000ff;
 }
+
+/* ESTIL DE LES SECCIONS AMB FONS D'IMATGE */
 .section {
     width: 100%;
-    padding: 60px 0;
-    border-bottom: 2px solid #000000; /* La línia que separa seccions */
-    text-align: center; /* Centra tot el text i elements interns */
-}
-body {
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: #0400ff;
-    color: #ffffff; /* Això posa tot el text en blanc */
-}
-.section {
-    color: #ffffff; /* El text de les seccions serà blanc */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-.section h2 {
-    color: #ffffff; /* Els títols també en blanc */
+/* RUTES D'IMATGES */
+#introduccio { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/bro.jpg'); }
+#impacte { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/clau.jpg'); }
+#exemples { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/mirall.jpg'); }
+#recursos { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/guants.jpg'); }
+
+/* FOOTER BLAU ELÈCTRIC */
+.pie {
+    background-color: #0000ff;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    font-weight: bold;
 }
 
-@media (max-width: 768px){
-    .barra-navegacion{
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .section {
+        background-attachment: scroll;
+        min-height: 70vh;
+    }
+    .barra-navegacion {
         flex-direction: column;
-        align-items: center;
         gap: 15px;
     }
-
-    .enlaces-navegacion{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        width: 100%;
+    .enlaces-navegacion a {
+        margin: 0 10px;
     }
-
-    .enlaces-navegacion a{
-        /*display: block;
-        width: 100%;*/
-        color:rgb(255, 166, 0);
-    }
- }
-
+}
